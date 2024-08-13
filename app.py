@@ -23,7 +23,9 @@ def upload_file():
             output_image.save(img_io, 'PNG')
             img_io.seek(0)
 
-            return send_file(img_io, mimetype='image/png', as_attachment=True, download_name='_rmbg.png')
+            download_name = f'{".".join(file.filename.split(".")[:-1])}_rmbg.png'
+            return send_file(img_io, mimetype='image/png', as_attachment=True,
+                             download_name=download_name)
     return render_template('index.html')
 
 
