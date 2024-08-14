@@ -1,4 +1,5 @@
 .idea
+.u2net
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
